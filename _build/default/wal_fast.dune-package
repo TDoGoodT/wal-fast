@@ -1,0 +1,85 @@
+(lang dune 3.22)
+(name wal_fast)
+(sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/wal_fast))
+(files
+ (lib
+  (META
+   dune-package
+   opam
+   wal_ast.ml
+   wal_env.ml
+   wal_eval.ml
+   wal_fast.a
+   wal_fast.cma
+   wal_fast.cmi
+   wal_fast.cmt
+   wal_fast.cmx
+   wal_fast.cmxa
+   wal_fast.ml
+   wal_fast__Wal_ast.cmi
+   wal_fast__Wal_ast.cmt
+   wal_fast__Wal_ast.cmx
+   wal_fast__Wal_env.cmi
+   wal_fast__Wal_env.cmt
+   wal_fast__Wal_env.cmx
+   wal_fast__Wal_eval.cmi
+   wal_fast__Wal_eval.cmt
+   wal_fast__Wal_eval.cmx
+   wal_fast__Wal_reader.cmi
+   wal_fast__Wal_reader.cmt
+   wal_fast__Wal_reader.cmx
+   wal_fast__Wal_trace.cmi
+   wal_fast__Wal_trace.cmt
+   wal_fast__Wal_trace.cmx
+   wal_fast__Wal_vcd.cmi
+   wal_fast__Wal_vcd.cmt
+   wal_fast__Wal_vcd.cmx
+   wal_reader.ml
+   wal_trace.ml
+   wal_vcd.ml))
+ (libexec (wal_fast.cmxs))
+ (bin (wal-fast))
+ (doc (LICENSE README.md)))
+(library
+ (name wal_fast)
+ (kind normal)
+ (archives (byte wal_fast.cma) (native wal_fast.cmxa))
+ (plugins (byte wal_fast.cma) (native wal_fast.cmxs))
+ (native_archives wal_fast.a)
+ (main_module_name Wal_fast)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name wal_fast)
+     (visibility public)
+     (kind alias)
+     (source (path Wal_fast) (impl (path wal_fast.ml-gen))))
+    (name Wal_fast)
+    (modules
+     (module
+      (obj_name wal_fast__Wal_ast)
+      (visibility public)
+      (source (path Wal_ast) (impl (path wal_ast.ml))))
+     (module
+      (obj_name wal_fast__Wal_env)
+      (visibility public)
+      (source (path Wal_env) (impl (path wal_env.ml))))
+     (module
+      (obj_name wal_fast__Wal_eval)
+      (visibility public)
+      (source (path Wal_eval) (impl (path wal_eval.ml))))
+     (module
+      (obj_name wal_fast__Wal_reader)
+      (visibility public)
+      (source (path Wal_reader) (impl (path wal_reader.ml))))
+     (module
+      (obj_name wal_fast__Wal_trace)
+      (visibility public)
+      (source (path Wal_trace) (impl (path wal_trace.ml))))
+     (module
+      (obj_name wal_fast__Wal_vcd)
+      (visibility public)
+      (source (path Wal_vcd) (impl (path wal_vcd.ml))))))
+   (wrapped true))))

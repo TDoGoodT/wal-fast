@@ -1,0 +1,4 @@
+(library
+ (name wal_fast)
+ (public_name wal_fast)
+ (modules wal_ast wal_reader wal_eval wal_env wal_trace wal_vcd))

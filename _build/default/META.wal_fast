@@ -1,0 +1,6 @@
+description = ""
+requires = ""
+archive(byte) = "wal_fast.cma"
+archive(native) = "wal_fast.cmxa"
+plugin(byte) = "wal_fast.cma"
+plugin(native) = "wal_fast.cmxs"

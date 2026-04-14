@@ -1,0 +1,19 @@
+NOTICE
+
+WAL-FAST is based on WAL (Waveform Analysis Language).
+
+Original WAL:
+  Copyright (c) 2021, Miro Haller, ICS - Institute for Complex Systems,
+  Johannes Kepler University Linz, Austria.
+  https://github.com/ics-jku/wal
+  Licensed under the BSD 3-Clause License.
+
+WAL-FAST is a ground-up reimplementation in OCaml, inspired by the
+design, language specification, and published academic work of the
+original WAL project. No Python source code from the original project
+was copied into this repository.
+
+If you use WAL or WAL-FAST in academic work, please also cite:
+  Miro Haller, Alois Schoepfl, Robert Koenig,
+  "WAL: A Novel Language for Waveform Analysis",
+  WOSET 2021.

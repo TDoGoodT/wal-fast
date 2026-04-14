@@ -1,0 +1,4 @@
+[33mASSERT[0m before first
+[33mASSERT[0m exact t=10
+[33mASSERT[0m between t=15
+[33mASSERT[0m after last t=100

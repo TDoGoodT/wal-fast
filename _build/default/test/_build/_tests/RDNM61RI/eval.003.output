@@ -1,0 +1,9 @@
+[failure] Arity mismatch: expected 0 args, got 2
+          Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+          Called from Wal_fast__Wal_eval.apply in file "lib/wal_eval.ml", lines 48-50, characters 6-48
+          Called from Stdlib__List.fold_left in file "list.ml", line 123, characters 24-34
+          Called from Dune__exe__Test_wal.eval_int in file "test/test_wal.ml", lines 35-37, characters 8-25
+          Called from Dune__exe__Test_wal.test_eval_division in file "test/test_wal.ml", line 117, characters 36-56
+          Called from Alcotest_engine__Core.Make.protect_test.(fun) in file "src/alcotest-engine/core.ml", line 186, characters 17-23
+          Called from Alcotest_engine__Monad.Identity.catch in file "src/alcotest-engine/monad.ml", line 24, characters 31-35
+          

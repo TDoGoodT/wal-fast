@@ -1,0 +1,4 @@
+(executable
+ (name main)
+ (public_name wal-fast)
+ (libraries wal_fast cmdliner))

@@ -1,0 +1,138 @@
+(6:config4:init19:1776176744470302665(7:version6:3.22.2)(9:build_dir6:_build)(4:argv(4:dune4:test))(3:env(15:SHELL=/bin/bash137:CAML_LD_LIBRARY_PATH=/home/snir/.opam/default/lib/stublibs:/home/snir/.opam/default/lib/ocaml/stublibs:/home/snir/.opam/default/lib/ocaml22:DISCORD_REACTIONS=true18:QT_ACCESSIBILITY=157:OCAML_TOPLEVEL_PATH=/home/snir/.opam/default/lib/toplevel30:TERMINAL_DOCKER_FORWARD_ENV=[]17:HERMES_EXEC_ASK=126:TERMINAL_CONTAINER_CPU=4.017:LANGUAGE=en_IL:en18:TERMINAL_ENV=local42:SSH_AUTH_SOCK=/run/user/1000/openssh_agent28:group_sessions_per_user=True50:MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=30:TERMINAL_CONTAINER_MEMORY=512027:GTK_MODULES=gail:atk-bridge59:OCAMLTOP_INCLUDE_PATH=/home/snir/.opam/default/lib/toplevel23:PWD=/home/snir/wal-fast12:LOGNAME=snir37:MANPATH=:/home/snir/.opam/default/man27:BROWSER_SESSION_TIMEOUT=3009:timezone=38:PNPM_HOME=/home/snir/.local/share/pnpm51:GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:121:WEB_TOOLS_DEBUG=false21:SYSTEMD_EXEC_PID=140933:HERMES_SESSION_CHAT_ID=182903848043:OPAM_SWITCH_PREFIX=/home/snir/.opam/default15:HOME=/home/snir23:IMAGE_TOOLS_DEBUG=false10:LANG=en_IL10:LS_COLORS=32:HERMES_SESSION_PLATFORM=telegram48:VIRTUAL_ENV=/home/snir/.hermes/hermes-agent/venv130:MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/hermes-gateway.service/memory.pressure29:TERMINAL_CONTAINER_DISK=5120019:TERMINAL_TIMEOUT=6046:INVOCATION_ID=f723c61fcbd34e9d9c9919672e73f5ed15:MANAGERPID=125129:TELEGRAM_REQUIRE_MENTION=true24:BROWSERBASE_PROXIES=true24:VISION_TOOLS_DEBUG=false14:HERMES_QUIET=130:BROWSER_INACTIVITY_TIMEOUT=1209:USER=snir78:TERMINAL_SINGULARITY_IMAGE=docker://nikolaik/python-nodejs:python3.11-nodejs2026:file_read_max_chars=10000036:HERMES_SESSION_CHAT_NAME=Snir Bachar7:SHLVL=165:TERMINAL_DAYTONA_IMAGE=nikolaik/python-nodejs:python3.11-nodejs2063:TERMINAL_MODAL_IMAGE=nikolaik/python-nodejs:python3.11-nodejs2030:TERMINAL_PERSISTENT_SHELL=True44:TERMINAL_CWD=/home/snir/.hermes/hermes-agent22:prefill_messages_file=30:XDG_RUNTIME_DIR=/run/user/100018:_config_version=1198:SSL_CERT_FILE=/home/snir/.hermes/hermes-agent/venv/lib/python3.11/site-packages/certifi/cacert.pem27:BUN_INSTALL=/home/snir/.bun26:TERMINAL_DOCKER_VOLUMES=[]26:HERMES_REDACT_SECRETS=true44:TERMINAL_DOCKER_MOUNT_CWD_TO_WORKSPACE=False21:JOURNAL_STREAM=9:791960:XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/24:HERMES_MAX_ITERATIONS=60205:PATH=/home/snir/.opam/default/bin:/home/snir/.local/bin:/home/snir/.local/share/pnpm:/home/snir/.bun/bin:/home/snir/.local/bin:/home/snir/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games53:DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus34:BROWSERBASE_ADVANCED_STEALTH=false52:HERMES_SESSION_KEY=agent:main:telegram:dm:182903848034:TERMINAL_CONTAINER_PERSISTENT=True64:TERMINAL_DOCKER_IMAGE=nikolaik/python-nodejs:python3.11-nodejs2021:MOA_TOOLS_DEBUG=false29:TERMINAL_LIFETIME_SECONDS=30038:OLDPWD=/home/snir/.hermes/hermes-agent30:HERMES_HOME=/home/snir/.hermes79:OPAM_LAST_ENV=/home/snir/.opam/.last-env/env-41a76cffc34b754868ae0aac5eeb25a9-035:_=/home/snir/.opam/default/bin/dune))(4:root19:/home/snir/wal-fast)(3:pid5:70524)(11:initial_cwd19:/home/snir/wal-fast)(5:start19:1776176744466633588))(3:log4:info19:1776176744470329106(7:message10:ocamlparam)(10:OCAMLPARAM5:unset))(3:log4:info19:1776176744470380244(7:message20:Shared cache enabled)(13:cache_enabled25:Enabled_except_user_rules))(3:log4:info19:1776176744470384940(7:message21:Shared cache location)(8:root_dir25:/home/snir/.cache/dune/db))(3:log4:info19:1776176744470399068(7:message14:Workspace root)(4:root19:/home/snir/wal-fast))(3:log4:info19:1776176744471620432(7:message25:Auto-detected concurrency)(11:concurrency2:20))(6:thread12:spawn_thread19:1776176744471635963(4:name14:signal-watcher))(10:persistent2:db(19:17761767444717693276:272230)(4:path17:_build/.digest-db)(6:module9:DIGEST-DB)(9:operation4:load))(3:log4:info19:1776176744472471152(7:message12:Dune context)(7:context((4:name7:default)(4:kind7:default)(7:profile3:Dev)(6:merlin4:true)(14:fdo_target_exe())(9:build_dir(12:In_build_dir7:default))(15:instrument_with()))))(5:rules9:Dune load(19:17761767444725028286:197563)(3:dir1:.))(7:process5:start19:1776176744473138000(12:process_args(7:-config))(3:pid5:70529)(10:categories())(6:queued4:2041)(4:prog39:/home/snir/.opam/default/bin/ocamlc.opt)(3:dir1:.))(7:process15:signal_received19:1776176744483932829(6:signal4:CHLD))(7:process6:finish(19:17761767444731380008:10902005)(12:process_args(7:-config))(3:pid5:70529)(10:categories())(4:prog39:/home/snir/.opam/default/bin/ocamlc.opt)(3:dir1:.)(4:exit1:0)(6:rusage((13:user_cpu_time7:7066000)(15:system_cpu_time7:3533000)(6:maxrss5:26348)(6:minflt4:1120)(6:majflt1:0)(7:inblock1:0)(7:oublock1:0)(5:nvcsw1:1)(6:nivcsw1:0))))(10:persistent2:db(19:17761767444846989215:93204)(4:path10:_build/.db)(6:module14:INCREMENTAL-DB)(9:operation4:load))(7:process5:start19:1776176744505449482(12:process_args())(3:pid5:70530)(10:categories())(6:queued3:879)(4:prog14:./test_wal.exe)(3:dir19:_build/default/test)(12:target_files(78:_build/.actions/default/test/runtest-test_wal-d9cbbf6fa3b6490fda4775519ff7a9e7)))(7:process15:signal_received19:1776176744509328689(6:signal4:CHLD))(7:process6:finish(19:17761767445054494827:3953535)(12:process_args())(3:pid5:70530)(10:categories())(4:prog14:./test_wal.exe)(3:dir19:_build/default/test)(4:exit1:1)(5:error18:exited with code 1)(12:target_files(78:_build/.actions/default/test/runtest-test_wal-d9cbbf6fa3b6490fda4775519ff7a9e7))(6:stdout4607:Testing `[1mwal-fast[0m'.
+[2mThis run has ID `RDNM61RI'.
+
+[0m  [32m[OK][0m          [36mreader[0m          0   parse int.
+  [32m[OK][0m          [36mreader[0m          1   parse negative int.
+  [32m[OK][0m          [36mreader[0m          2   parse float.
+  [32m[OK][0m          [36mreader[0m          3   parse #t.
+  [32m[OK][0m          [36mreader[0m          4   parse #f.
+  [32m[OK][0m          [36mreader[0m          5   parse string.
+  [32m[OK][0m          [36mreader[0m          6   parse symbol.
+  [32m[OK][0m          [36mreader[0m          7   parse hyphen symbol.
+  [32m[OK][0m          [36mreader[0m          8   parse empty list.
+  [32m[OK][0m          [36mreader[0m          9   parse simple list.
+  [32m[OK][0m          [36mreader[0m         10   parse nested list.
+  [32m[OK][0m          [36mreader[0m         11   parse quote shorthand.
+  [32m[OK][0m          [36mreader[0m         12   comment ignored.
+  [32m[OK][0m          [36mreader[0m         13   program multiple.
+[1m[31m>[0;1m[0m [31m[FAIL][0m        [36meval[0m            0   addition.
+  [31m[FAIL][0m        [36meval[0m            1   nested arith.
+  [31m[FAIL][0m        [36meval[0m            2   subtraction.
+  [31m[FAIL][0m        [36meval[0m            3   division.
+  [31m[FAIL][0m        [36meval[0m            4   modulo.
+  [32m[OK][0m          [36meval[0m            5   if true.
+  [32m[OK][0m          [36meval[0m            6   if false.
+  [31m[FAIL][0m        [36meval[0m            7   = true.
+  [31m[FAIL][0m        [36meval[0m            8   = false.
+  [31m[FAIL][0m        [36meval[0m            9   let binding.
+  [31m[FAIL][0m        [36meval[0m           10   let* sequential.
+  [31m[FAIL][0m        [36meval[0m           11   define and use.
+  [31m[FAIL][0m        [36meval[0m           12   lambda.
+  [31m[FAIL][0m        [36meval[0m           13   named function.
+  [31m[FAIL][0m        [36meval[0m           14   recursive factorial.
+  [31m[FAIL][0m        [36meval[0m           15   map.
+  [31m[FAIL][0m        [36meval[0m           16   filter.
+  [31m[FAIL][0m        [36meval[0m           17   length.
+  [31m[FAIL][0m        [36meval[0m           18   car.
+  [31m[FAIL][0m        [36meval[0m           19   cdr.
+  [32m[OK][0m          [36meval[0m           20   and true.
+  [32m[OK][0m          [36meval[0m           21   and short-circuit.
+  [32m[OK][0m          [36meval[0m           22   or.
+  [31m[FAIL][0m        [36meval[0m           23   cond.
+  [32m[OK][0m          [36mvcd[0m             0   value_at binary search.
+
+[2m┌──────────────────────────────────────────────────────────────────────────────┐[0m
+[2m│ [0m[31m[FAIL][0m        [36meval[0m            0   addition.[2m                                  │[0m
+[2m└──────────────────────────────────────────────────────────────────────────────┘[0m
+[failure] Arity mismatch: expected 0 args, got 2
+          Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+          Called from Wal_fast__Wal_eval.apply in file "lib/wal_eval.ml", lines 48-50, characters 6-48
+          Called from Stdlib__List.fold_left in file "list.ml", line 123, characters 24-34
+          Called from Dune__exe__Test_wal.eval_int in file "test/test_wal.ml", lines 35-37, characters 8-25
+          Called from Dune__exe__Test_wal.test_eval_addition in file "test/test_wal.ml", line 108, characters 36-56
+          Called from Alcotest_engine__Core.Make.protect_test.(fun) in file "src/alcotest-engine/core.ml", line 186, characters 17-23
+          Called from Alcotest_engine__Monad.Identity.catch in file "src/alcotest-engine/monad.ml", line 24, characters 31-35
+          
+Logs saved to `[36m~/wal-fast/_build/default/test/_build/_tests/wal-fast/eval.000.output[0m'.
+ [2m──────────────────────────────────────────────────────────────────────────────[0m
+
+Full test results in `[36m~/wal-fast/_build/default/test/_build/_tests/wal-fast[0m'.
+[31m19 failures![0m in 0.001s. 39 tests run.
+)(6:rusage((13:user_cpu_time1:0)(15:system_cpu_time7:3744000)(6:maxrss5:28108)(6:minflt3:630)(6:majflt1:0)(7:inblock1:0)(7:oublock3:312)(5:nvcsw1:1)(6:nivcsw1:1))))(11:diagnostics4:user19:1776176744509510638(3:exn3828:File "test/dune", line 2, characters 7-15:
+Testing `wal-fast'.
+This run has ID `RDNM61RI'.
+
+  [OK]          reader          0   parse int.
+  [OK]          reader          1   parse negative int.
+  [OK]          reader          2   parse float.
+  [OK]          reader          3   parse #t.
+  [OK]          reader          4   parse #f.
+  [OK]          reader          5   parse string.
+  [OK]          reader          6   parse symbol.
+  [OK]          reader          7   parse hyphen symbol.
+  [OK]          reader          8   parse empty list.
+  [OK]          reader          9   parse simple list.
+  [OK]          reader         10   parse nested list.
+  [OK]          reader         11   parse quote shorthand.
+  [OK]          reader         12   comment ignored.
+  [OK]          reader         13   program multiple.
+> [FAIL]        eval            0   addition.
+  [FAIL]        eval            1   nested arith.
+  [FAIL]        eval            2   subtraction.
+  [FAIL]        eval            3   division.
+  [FAIL]        eval            4   modulo.
+  [OK]          eval            5   if true.
+  [OK]          eval            6   if false.
+  [FAIL]        eval            7   = true.
+  [FAIL]        eval            8   = false.
+  [FAIL]        eval            9   let binding.
+  [FAIL]        eval           10   let* sequential.
+  [FAIL]        eval           11   define and use.
+  [FAIL]        eval           12   lambda.
+  [FAIL]        eval           13   named function.
+  [FAIL]        eval           14   recursive factorial.
+  [FAIL]        eval           15   map.
+  [FAIL]        eval           16   filter.
+  [FAIL]        eval           17   length.
+  [FAIL]        eval           18   car.
+  [FAIL]        eval           19   cdr.
+  [OK]          eval           20   and true.
+  [OK]          eval           21   and short-circuit.
+  [OK]          eval           22   or.
+  [FAIL]        eval           23   cond.
+  [OK]          vcd             0   value_at binary search.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ [FAIL]        eval            0   addition.                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+[failure] Arity mismatch: expected 0 args, got 2
+          Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+          Called from Wal_fast__Wal_eval.apply in file "lib/wal_eval.ml", lines 48-50, characters 6-48
+          Called from Stdlib__List.fold_left in file "list.ml", line 123, characters 24-34
+          Called from Dune__exe__Test_wal.eval_int in file "test/test_wal.ml", lines 35-37, characters 8-25
+          Called from Dune__exe__Test_wal.test_eval_addition in file "test/test_wal.ml", line 108, characters 36-56
+          Called from Alcotest_engine__Core.Make.protect_test.(fun) in file "src/alcotest-engine/core.ml", line 186, characters 17-23
+          Called from Alcotest_engine__Monad.Identity.catch in file "src/alcotest-engine/monad.ml", line 24, characters 31-35
+          
+Logs saved to `~/wal-fast/_build/default/test/_build/_tests/wal-fast/eval.000.output'.
+ ──────────────────────────────────────────────────────────────────────────────
+
+Full test results in `~/wal-fast/_build/default/test/_build/_tests/wal-fast'.
+19 failures! in 0.001s. 39 tests run.
+)(3:loc11:test/dune:2)(4:memo((14:execute-action((6:digest(6:digest32:d9cbbf6fa3b6490fda4775519ff7a9e7))(3:loc((9:pos_fname9:test/dune)(5:start((8:pos_lnum1:2)(7:pos_bol1:6)(8:pos_cnum2:13)))(4:stop((8:pos_lnum1:2)(7:pos_bol1:6)(8:pos_cnum2:21)))))))(9:<unnamed>())(11:build-alias((3:dir(12:In_build_dir12:default/test))(4:name16:runtest-test_wal)))(9:<unnamed>())(11:build-alias((3:dir(12:In_build_dir12:default/test))(4:name7:runtest)))(8:toplevel())))(9:backtrace1671:Raised at Dune_engine__Process.Handle_exit_status.fail in file "dune_engine__Process.ml", lines 596-604, characters 4-24
+Called from Dune_engine__Process.run_internal.(fun) in file "dune_engine__Process.ml", lines 1141-1150, characters 10-66
+Called from Fiber__Core.O.(>>|).(fun) in file "fiber__Core.ml", line 258, characters 36-41
+Called from Fiber__Scheduler.exec in file "fiber__Scheduler.ml", line 77, characters 8-11
+Re-raised at Stdune__Exn.raise_with_backtrace in file "stdune__Exn.ml" (inlined), line 39, characters 27-56
+Called from Stdune__Exn_with_backtrace.reraise in file "stdune__Exn_with_backtrace.ml", line 21, characters 33-71
+Called from Fiber__Scheduler.exec in file "fiber__Scheduler.ml", line 77, characters 8-11
+Re-raised at Stdune__Exn.raise_with_backtrace in file "stdune__Exn.ml" (inlined), line 39, characters 27-56
+Called from Stdune__Exn_with_backtrace.reraise in file "stdune__Exn_with_backtrace.ml", line 21, characters 33-71
+Called from Fiber__Scheduler.exec in file "fiber__Scheduler.ml", line 77, characters 8-11
+Re-raised at Stdune__Exn.raise_with_backtrace in file "stdune__Exn.ml" (inlined), line 39, characters 27-56
+Called from Stdune__Exn_with_backtrace.reraise in file "stdune__Exn_with_backtrace.ml", line 21, characters 33-71
+Called from Fiber__Scheduler.exec in file "fiber__Scheduler.ml", line 77, characters 8-11
+Re-raised at Stdune__Exn.raise_with_backtrace in file "stdune__Exn.ml" (inlined), line 39, characters 27-56
+Called from Stdune__Exn_with_backtrace.reraise in file "stdune__Exn_with_backtrace.ml", line 21, characters 33-71
+Called from Fiber__Scheduler.exec in file "fiber__Scheduler.ml", line 77, characters 8-11
+))(7:process15:signal_received19:1776176744509698458(6:signal4:USR1))(10:persistent2:db(19:17761767445098336236:151436)(4:path17:_build/.digest-db)(6:module9:DIGEST-DB)(9:operation4:save))(6:config4:exit19:1776176744509996534(2:gc((10:stack_size1:0)(10:heap_words6:533948)(14:top_heap_words6:533948)(11:minor_words8:2096882.)(11:major_words7:461018.)(14:promoted_words7:434741.)(11:compactions1:0)(17:major_collections1:4)(17:minor_collections2:10)))(2:io((10:files_read((5:count2:16)(4:time6:242096)(5:bytes4:5636)))(13:files_written((5:count1:2)(4:time1:0)(5:bytes2:14)))(16:directories_read((5:count1:1)(4:time1:0)))))(6:digest((5:files((5:count1:0)(4:time1:0)(5:bytes1:0)))(6:values((5:count3:238)(4:time6:232017)(5:bytes5:58738))))))
