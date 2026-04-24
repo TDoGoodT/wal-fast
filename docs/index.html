@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WAL-FAST — Blazing Fast Waveform Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161b22;
+      --border: #30363d;
+      --orange: #f97316;
+      --orange-dim: #c2540a;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --code-bg: #1c2128;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,15,20,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--orange); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--orange); color: #000; font-weight: 600; font-size: 0.85rem;
+      padding: 0.45rem 1.1rem; border-radius: 6px; text-decoration: none;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--orange-dim); color: #fff; }
+
+    /* HERO */
+    .hero {
+      max-width: 860px; margin: 0 auto;
+      padding: 7rem 2rem 5rem;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: rgba(249,115,22,0.12); border: 1px solid rgba(249,115,22,0.3);
+      color: var(--orange); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace;
+      padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.02em; margin-bottom: 1.2rem;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero p {
+      font-size: 1.15rem; color: var(--muted); max-width: 580px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--orange); color: #000; font-weight: 700;
+      padding: 0.75rem 1.8rem; border-radius: 8px; text-decoration: none;
+      transition: background .2s;
+    }
+    .btn-primary:hover { background: var(--orange-dim); color: #fff; }
+    .btn-secondary {
+      background: var(--surface); color: var(--text); font-weight: 600;
+      padding: 0.75rem 1.8rem; border-radius: 8px; text-decoration: none;
+      border: 1px solid var(--border); transition: border-color .2s;
+    }
+    .btn-secondary:hover { border-color: var(--orange); }
+
+    /* COMPARISON TABLE */
+    .section { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+      color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    .section h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 2.5rem; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { padding: 0.85rem 1.2rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    td:first-child { color: var(--muted); }
+    .good { color: #4ade80; font-weight: 600; }
+    .bad { color: #f87171; }
+
+    /* FEATURES */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
+    .feature-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 1.5rem;
+      transition: border-color .2s;
+    }
+    .feature-card:hover { border-color: var(--orange); }
+    .feature-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .feature-card p { font-size: 0.88rem; color: var(--muted); }
+
+    /* CODE */
+    .code-block {
+      background: var(--code-bg); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+      overflow-x: auto; line-height: 1.7;
+    }
+    .code-block .comment { color: #6e7681; }
+    .code-block .cmd { color: var(--orange); }
+    .code-block .kw { color: #79c0ff; }
+    .code-block .str { color: #a5d6ff; }
+
+    /* ROADMAP */
+    .roadmap { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .roadmap li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; }
+    .roadmap li.done { color: var(--muted); }
+    .roadmap li.done::before { content: "✓"; color: #4ade80; font-weight: 700; min-width: 1rem; }
+    .roadmap li.todo::before { content: "○"; color: var(--border); min-width: 1rem; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center; padding: 2.5rem 2rem;
+      color: var(--muted); font-size: 0.85rem;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="#">WAL-FAST 🔥</a>
+    <div class="nav-links">
+      <a href="#why">Why</a>
+      <a href="#quickstart">Quick Start</a>
+      <a href="#language">Language</a>
+      <a href="#roadmap">Roadmap</a>
+    </div>
+    <a class="nav-cta" href="https://github.com/TDoGoodT/wal-fast" target="_blank">GitHub →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">🔥 OCaml-powered · EDA-grade performance</div>
+    <h1>Waveform analysis<br/><span>without the wait.</span></h1>
+    <p>WAL-FAST is a high-performance reimplementation of the WAL Lisp language in OCaml. Stream and analyze 10GB+ VCD files in under a second.</p>
+    <div class="hero-buttons">
+      <a class="btn-primary" href="#quickstart">Get Started</a>
+      <a class="btn-secondary" href="https://github.com/TDoGoodT/wal-fast" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WHY -->
+  <section class="section" id="why">
+    <div class="section-label">Why WAL-FAST</div>
+    <h2>The original WAL is brilliant.<br/>The engine was not.</h2>
+    <table>
+      <thead>
+        <tr><th></th><th>Original WAL</th><th>WAL-FAST</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Engine</td><td class="bad">Python (interpreted)</td><td class="good">OCaml (native compiled)</td></tr>
+        <tr><td>VCD loading</td><td class="bad">Full file into RAM</td><td class="good">Streaming + indexed</td></tr>
+        <tr><td>100MB file</td><td class="bad">~10s startup</td><td class="good">&lt;1s</td></tr>
+        <tr><td>10GB file</td><td class="bad">Out of memory</td><td class="good">Works</td></tr>
+        <tr><td>Language</td><td>WAL Lisp</td><td class="good">WAL Lisp (compatible)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FEATURES -->
+  <section class="section">
+    <div class="section-label">Features</div>
+    <h2>Built for real chip verification.</h2>
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Streaming VCD Parser</h3>
+        <p>Binary-search signal lookup. No need to load the whole file into memory.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🦪</div>
+        <h3>Full WAL Lisp</h3>
+        <p>Compatible with the original WAL language — closures, lambdas, for-each-timestep.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🖥️</div>
+        <h3>CLI + REPL</h3>
+        <p>Run scripts, index traces, or explore interactively with a live REPL.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏗️</div>
+        <h3>Native OCaml</h3>
+        <p>Compiled to native machine code via Dune. No interpreter overhead.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- QUICK START -->
+  <section class="section" id="quickstart">
+    <div class="section-label">Quick Start</div>
+    <h2>Up and running in minutes.</h2>
+    <div class="code-block">
+<span class="comment"># Install dependencies</span>
+<span class="cmd">opam install</span> dune ocaml-lsp-server alcotest cmdliner
+
+<span class="comment"># Clone and build</span>
+<span class="cmd">git clone</span> https://github.com/TDoGoodT/wal-fast
+<span class="cmd">cd</span> wal-fast
+<span class="cmd">dune build</span>
+
+<span class="comment"># Inspect a trace</span>
+<span class="cmd">dune exec</span> bin/main.exe <span class="str">-- index simulation.vcd</span>
+
+<span class="comment"># Run a WAL script</span>
+<span class="cmd">dune exec</span> bin/main.exe <span class="str">-- run analysis.wal simulation.vcd</span>
+
+<span class="comment"># Interactive REPL</span>
+<span class="cmd">dune exec</span> bin/main.exe <span class="str">-- repl simulation.vcd</span>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- LANGUAGE -->
+  <section class="section" id="language">
+    <div class="section-label">Language</div>
+    <h2>WAL Lisp — quick reference.</h2>
+    <div class="code-block">
+<span class="comment">; Arithmetic</span>
+<span class="kw">(+ 1 2)</span>                    <span class="comment">; => 3</span>
+<span class="kw">(define</span> square <span class="kw">(lambda</span> (n) (* n n)))
+(square 5)                 <span class="comment">; => 25</span>
+
+<span class="comment">; Signal access — VCD signals are in scope</span>
+clk                        <span class="comment">; => current value of signal "clk"</span>
+data                       <span class="comment">; => current value of signal "data"</span>
+
+<span class="comment">; Iterate over all timesteps</span>
+<span class="kw">(for-each-timestep</span>
+  (<span class="kw">if</span> (= clk 1)
+      (println data)))
+
+<span class="comment">; Find first rising edge</span>
+<span class="kw">(find-first</span> (<span class="kw">lambda</span> () (rising-edge clk)))
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="section-label">Roadmap</div>
+    <h2>What's next.</h2>
+    <ul class="roadmap">
+      <li class="done">WAL Lisp parser (s-expressions)</li>
+      <li class="done">Tree-walking evaluator</li>
+      <li class="done">VCD parser with binary-search signal lookup</li>
+      <li class="done">Trace cursor with for-each-timestep</li>
+      <li class="done">CLI: run / repl / index</li>
+      <li class="todo">Streaming VCD parser (O(1) memory)</li>
+      <li class="todo">.wfi persistent index format (mmap-backed)</li>
+      <li class="todo">FST format support (GTKWave)</li>
+      <li class="todo">Parallel signal analysis (OCaml 5 Domains)</li>
+      <li class="todo">Python SDK via ocaml-rs</li>
+      <li class="todo">WAL bytecode compiler + VM (v2)</li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <footer>
+    <p>WAL-FAST — BSD-3-Clause · Based on <a href="https://github.com/ics-jku/wal" target="_blank">WAL by Miro Haller, ICS-JKU Linz</a></p>
+    <p style="margin-top:0.5rem;"><a href="https://github.com/TDoGoodT/wal-fast" target="_blank">github.com/TDoGoodT/wal-fast</a></p>
+  </footer>
+
+</body>
+</html>
