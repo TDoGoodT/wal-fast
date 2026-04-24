@@ -70,6 +70,7 @@
       cursor: pointer; border-left: 3px solid transparent;
       transition: all .15s; text-decoration: none;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      -webkit-tap-highlight-color: transparent;
     }
     .nav-item:hover { color: var(--text); background: rgba(255,255,255,0.04); }
     .nav-item.active { color: var(--orange); border-left-color: var(--orange); background: rgba(249,115,22,0.08); }
@@ -204,7 +205,7 @@
   function renderNav(pages) {
     const nav = document.getElementById('nav-list');
     nav.innerHTML = pages.map(p =>
-      `<a class="nav-item ${p.slug === currentSlug ? 'active' : ''}" onclick="loadPage('${p.slug}')">${p.title}</a>`
+      `<a class="nav-item ${p.slug === currentSlug ? 'active' : ''}" href="#" onclick="event.preventDefault();loadPage('${p.slug}')">${p.title}</a>`
     ).join('');
   }
 
