@@ -34,7 +34,16 @@
       border-right: 1px solid var(--border);
       display: flex; flex-direction: column;
       overflow: hidden;
+      transition: transform .25s ease;
     }
+
+    /* OVERLAY (mobile) */
+    .overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 50;
+      background: rgba(0,0,0,0.6);
+    }
+    .overlay.open { display: block; }
     .sidebar-header {
       padding: 1.2rem 1.2rem 1rem;
       border-bottom: 1px solid var(--border);
@@ -79,8 +88,26 @@
       padding: 0.7rem 2rem;
       display: flex; align-items: center; gap: 1rem;
     }
+    .hamburger {
+      display: none;
+      background: none; border: none; color: var(--text);
+      font-size: 1.3rem; cursor: pointer; padding: 0.2rem 0.5rem;
+      flex-shrink: 0;
+    }
     .toolbar-title { font-size: 0.9rem; font-weight: 600; }
     .toolbar-slug { font-size: 0.75rem; color: var(--muted); font-family: monospace; }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+      .sidebar {
+        position: fixed; top: 0; left: 0; bottom: 0;
+        z-index: 60; transform: translateX(-100%);
+      }
+      .sidebar.open { transform: translateX(0); }
+      .hamburger { display: block; }
+      .toolbar { padding: 0.7rem 1rem; }
+      .content { padding: 1.5rem 1rem 3rem; }
+    }
     .content {
       flex: 1;
       max-width: 800px; width: 100%;
@@ -113,8 +140,8 @@
 </head>
 <body>
 <div class="layout">
-
-  <aside class="sidebar">
+  <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <h1>WAL-FAST 🔥</h1>
       <p>OCaml Learning Wiki</p>
@@ -128,6 +155,7 @@
 
   <div class="main">
     <div class="toolbar">
+      <button class="hamburger" onclick="openSidebar()">☰</button>
       <span class="toolbar-title" id="toolbar-title">Pick a page</span>
       <span class="toolbar-slug" id="toolbar-slug"></span>
     </div>
@@ -155,6 +183,15 @@
 
   let allPages = [], currentSlug = null;
 
+  function openSidebar() {
+    document.getElementById('sidebar').classList.add('open');
+    document.getElementById('overlay').classList.add('open');
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('open');
+  }
+
   async function loadNav() {
     const res = await fetch('/api/pages');
     allPages = await res.json();
@@ -178,6 +215,7 @@
 
   async function loadPage(slug) {
     currentSlug = slug;
+    closeSidebar();
     const res = await fetch(`/api/page/${slug}`);
     const md = await res.text();
     document.getElementById('content').innerHTML = marked.parse(md);
